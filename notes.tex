@@ -1,0 +1,58 @@
+\documentclass[8pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{fixltx2e}
+\usepackage{framed}
+\usepackage[empty]{fullpage}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{parskip}
+\usepackage{pdfpages}
+\addtolength{\oddsidemargin}{-0.25in}
+\addtolength{\evensidemargin}{-0.25in}
+\addtolength{\textwidth}{0.5in}
+\title{Class No. - Class Name}
+\author{Student Name\\[1cm]{\small Professor: Professor Name}}
+\date{Fall 2017}
+\begin{document}
+
+% Lazy floor function
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+
+% Add in a box for a quick way to see where classes were started.
+% This will also include an entry in the table of contents for the date.
+\newcommand{\StartOfClass}[1] {
+	\addcontentsline{toc}{subsection}{\protect\numberline{}#1}
+  	\noindent\fbox{%
+    \parbox{\textwidth}{%
+      \begin{center}
+        \textbf{Start of class #1}
+      \end{center}
+    }%
+  }
+}
+
+% Adds any handouts inline with the rest of the document.
+% Adds handout to the table of contents.
+\newcommand{\Handout}[1] {
+	\addcontentsline{toc}{section}{\protect\numberline{}#1}
+	\includepdf[pages={-}]{#1}
+}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\chapter{Class Overview}
+
+\section{Class Logistics}
+
+\StartOfClass{2017.08.29}
+
+\end{document}
